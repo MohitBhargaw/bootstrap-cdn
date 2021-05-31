@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>ES6 new Syntax</title>
+    </head>
+    <body>
+        <script>
+            //example of hoisting
+            // 'use strict';
+            // console.log(productId); //undefined 
+            // var productId=12; 
+
+        //     'use strict';
+        //     console.log(productId); 
+        //     let productId=12;
+        // wrong way to use let
+        
+        // 'use strict'; // for let correct method
+        // let productId=12;
+        // console.log(productId);
+
+        // 'use strict';
+        //     let productId;
+        // console.log(productId);  //undefined   
+      
+        // 'use strict';
+        //     let productId=12;
+        //     {
+        //         let productId=2000;  
+        //     }
+        // console.log(productId);  //12 output
+       
+        // 'use strict';
+        //     {
+        //         // Block scope
+        //         let productId=2000;  
+        //     }
+        // console.log(productId);  
+        
+        // 'use strict';
+        // // Temporal dead zone
+        //  function updateProuductId(){
+        //     productId=12;
+        // }
+        // let productId= null;
+        // updateProuductId();  
+        // console.log(productId);  //output 12 
+         
+        // 'use strict';
+        // let productId=43;
+        // for(let productid=0;productId<10; productId++)
+        // {
+        // }
+        //  console.log(productId);   // output 43
+        
+        // 'use strict';
+        // let updateFunctions=[];
+        // for(var i=0;i<2;i++)
+        // {
+        // updateFunctions.push(function() {return i;});
+        // }
+        // console.log(updateFunctions[0]());   //output 2 
+        // console.log(updateFunctions[1]());   //output 2 
+        
+        // 'use strict';
+        // let updateFunctions=[];
+        // for(let i=0;i<2;i++)
+        // {
+        // updateFunctions.push(function() {return i;});
+        // }
+        // console.log(updateFunctions[0]());   //output 0 let will create i variable 
+        // console.log(updateFunctions[1]());   //output 1 
+     
+        // 'use strict';
+        // const MARKUP_PCT=100;
+        // console.log(MARKUP_PCT);  // output 100
+
+        // 'use strict';
+        // const MARKUP_PCT; // not initialising constant
+        // console.log(MARKUP_PCT);  // output error as not initialise constant variable
+
+        // 'use strict';
+        // const MARKUP_PCT=200; 
+        // MARKUP_PCT=10;  
+        // console.log(MARKUP_PCT); //error as already initialised
+ 
+        'use strict';
+                const MARKUP_PCT=200;
+        if(MARKUP_PCT > 0)
+        { // block accesible within this block
+       const MARKUP_PCT=10;  
+        } 
+        console.log(MARKUP_PCT);  // output is 100
+
+
+      </script>
+    </body>
+</html>   

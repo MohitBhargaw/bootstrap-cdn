@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Recursion</title>
+    </head>
+    <body>
+        <script>
+            var orgChart = {
+                name : 'Mohit', subordinates : [
+                    {
+                        name: 'rohan' , subordinates : [
+                     {
+                            name: 'akash' , subordinates : []
+                    },
+                    {
+                        name : 'Varun',  subordinates : []
+                    }
+                        ]  
+                    }
+                ]   
+            }; 
+            var fn = function(topEmployee)
+            {   
+                console.log(topEmployee.name);
+                for(var i= 0;i<topEmployee.subordinates.length;i++)
+                    fn(topEmployee.subordinates[i]);                
+            };
+               fn(orgChart);
+        </script>
+    </body>
+</html>
